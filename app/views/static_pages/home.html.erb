@@ -1,0 +1,8 @@
+<p>Enter a user id to search photos</p>
+<%= form_tag root_path, method: :get do %>
+  <%= text_field_tag :flickr_id %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+<h1>Pictures</h1>
+<%= render_flickr_sidebar_widget(@flickr_id) %>
